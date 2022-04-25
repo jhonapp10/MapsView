@@ -15,7 +15,7 @@ import { Marker } from '@react-google-maps/api';
 import { LoadMarket,SetLatMarket,SetLngMarket} from "../stores/market/actions";
 import GoogleMapReact from 'google-map-react'
 import credentials from "../credentials";
-import Search from "./Search";
+//import Search from "./Search";
 import zIndex from "@mui/material/styles/zIndex";
 
 
