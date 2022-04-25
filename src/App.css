@@ -27,6 +27,29 @@
 .App-link {
   color: #61dafb;
 }
+.Mapas{
+  padding-top: 20px;
+  width: 100%;
+  height: 90vh;
+}
+
+.mapaLeft{
+  padding: 5px;
+  width: 60%;
+  height: 100%;
+  float: left;
+
+}
+.mapaRight{
+  padding: 5px;
+  width: 35%;
+  height: 100%;
+  float: left;
+}
+
+.varSearch{
+  z-index: 0;
+}
 
 @keyframes App-logo-spin {
   from {

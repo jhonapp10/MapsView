@@ -1,0 +1,12 @@
+
+Ejercicio 1 
+
+Que problemas detectas en la operación?
+
+Vemos que todos los caminos posibles de la solucion no se contemplan.
+Yo haria uso de case para solucionar el problema.
+
+Despues del bucle foreach una variable option swith(option) vincular cada caso con un case.
+
+
+
