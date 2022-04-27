@@ -82,7 +82,7 @@ class Searchtext extends Component {
 
           
         return(
-          <div>
+          <div className="Search">
               <Autocomplete 
               style={{
                 width: '100%',

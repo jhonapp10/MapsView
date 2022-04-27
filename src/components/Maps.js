@@ -10,22 +10,28 @@ import '../App.css';
     Marker,
     InfoWindow
   } from "react-google-maps";*/
-import { Marker } from '@react-google-maps/api';
+//import { Marker } from '@react-google-maps/api';
 //import {InfoWindow, Marker, GoogleApiWrapper,Map} from 'google-maps-react';
 import { LoadMarket,SetLatMarket,SetLngMarket} from "../stores/market/actions";
 import GoogleMapReact from 'google-map-react'
 import credentials from "../credentials";
 //import Search from "./Search";
 import zIndex from "@mui/material/styles/zIndex";
+import Marker from "./Marker";
+
+
 
 
 
 class Maps extends Component {
 
+
     componentDidMount(){
         console.log("componente didmount");
+
         
     }
+
 
     renderMarkers= (map,maps) =>{
 
@@ -44,6 +50,7 @@ class Maps extends Component {
 
         let marker = new maps.Marker({
             position: { lat: this.props.lat, lng: this.props.lng },
+            //position:{position},
             draggable: true,
             map,
             title: this.props.placeSearch
@@ -64,10 +71,14 @@ class Maps extends Component {
         /*<div className="varSearch col-7">
                         <Search></Search>
                     </div>*/
-        if (this.props.loadMarket==true){
+        if (this.props.loadMarket===true){
 
 
             console.log("if load cierto");
+
+            console.log("lat:",this.props.lat);
+            console.log("longitud:",this.props.lng);
+
             return(             
                     
                     
@@ -80,11 +91,14 @@ class Maps extends Component {
                     zIndex={0}
                     
                     yesIWantToUseGoogleMapApiInternals={true}
-                    onGoogleApiLoaded={({ map, maps }) => this.renderMarkers(map, maps)}
+                    //onGoogleApiLoaded={({ map, maps }) => this.renderMarkers(map, maps)}
+                    
                     //onDrag={({ map, maps }) => this.renderMarkers(map, maps)}
 
                     >
-                    <Marker title="hola" coordinate={{latitude: this.props.lat, longitude: this.props.lng}}/>
+                    <Marker title="hola" //position= { lat: this.props.lat, lng: this.props.lng }
+                    lat={this.props.lat}
+                    lng={this.props.lng}/>
                        
                             
                     </GoogleMapReact>

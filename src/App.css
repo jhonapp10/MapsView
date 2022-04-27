@@ -50,6 +50,9 @@
 .varSearch{
   z-index: 0;
 }
+.Search{
+  padding-right: 25px;
+}
 
 @keyframes App-logo-spin {
   from {
