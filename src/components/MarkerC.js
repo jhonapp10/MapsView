@@ -1,35 +1,33 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../App.css';
-import pin from "../../pin.png";
-import { Link } from "react-router-dom";
+//import pin from "../../pin.png";
+
+import {Marker} from "react-google-maps";
 
 import { LoadMarket,SetLatMarket,SetLngMarket} from "../stores/market/actions";
-
-const markerStyle = {
-    position: "absolute",
-    top: "100%",
-    left: "50%",
-    transform: "translate(-50%, -100%)"
-  };
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 
-class Marker extends Component {
+
+
+class MarkerC extends Component {
+
+
 
     render(){
 
-        console.log(this.props.lat);
-        console.log(this.props.lng);
+        
 
 
         return (
 
-            <div className="marker">
-                <Link /*to={"/" + item.name}*/ /*key={i.id}*/ lat={this.props.lat} lng={this.props.lng}>
-                    <img style={markerStyle} src={pin} alt="pin" />
-                </Link>
-
-            </div>
+            <Marker>
+                <FontAwesomeIcon icon={faLocationDot} size="2x" color="red"/>
+                <span id="spanMarker">{this.props.placeSearch}</span>
+                
+            </Marker>
 
 
 
@@ -66,4 +64,4 @@ const mapDispatchToProps ={
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Marker);
+export default connect(mapStateToProps,mapDispatchToProps)(MarkerC);

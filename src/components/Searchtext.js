@@ -26,14 +26,6 @@ import {
   } from 'react-places-autocomplete';
 import Maps from "./Maps";
 
-const Wrapper = styled.div`
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-  text-align:center;
-`;
 
 /*const searchOptions = {
     location: new this.props.google.maps.LatLng(-34, 151),
@@ -41,6 +33,13 @@ const Wrapper = styled.div`
     types: ['address']
   }*/
 class Searchtext extends Component {
+
+    ChangeAuto = (place) =>{
+
+      console.log("change", place);
+
+      
+    }
 
 
     onPlaceSelected = ( place ) => {
@@ -73,30 +72,25 @@ class Searchtext extends Component {
         render(){
 
 
-
-        /*return (
-          <GooglePlacesAutocomplete
-           apiKey="AIzaSyBWFXa1kP2tnUlZErfCJ5jOMsUgJkVj9Lc"
-           />
-        );*/
-
           
         return(
           <div className="Search">
               <Autocomplete 
               style={{
-                width: '100%',
-                height: '40px',
+                width: '55%',
+                height: '25px',
                 paddingLeft: '16px',
                 marginTop: '2px',
                 //marginBottom: '100px'
                }}
-               /*options = {
-                fields= ["address_components", "geometry", "icon", "name"]
-    
-              }*/
+
+              //onChange={this.ChangeAuto}
+            
+              
                onPlaceSelected={ this.onPlaceSelected }
+               
                types={['(regions)']}
+               placeholder="Search Places"
               />
 
               
@@ -107,22 +101,7 @@ class Searchtext extends Component {
 
    
 
-    /*render() {
-        const autoComplete = this.Autocomplete;
-        console.log(searchOptions);
-        return (
-            <div className="modalSearch">
-                <TextField                
-                id="outlined-basic"
-                variant="outlined"
-                fullWidth
-                label="Search"
-                >
-
-                </TextField>
-            </div>
-        );
-    }*/
+   
 
 }
 

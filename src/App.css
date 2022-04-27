@@ -54,6 +54,22 @@
   padding-right: 25px;
 }
 
+.circle {
+  background: #d83b01;
+  border-radius: 50%;
+  color: #fff;
+  height: 2.5em;
+  position: relative;
+  width: 2.5em;
+
+  border: 1px solid transparent;
+}
+
+#spanMarker{
+  
+  color: red;
+  }
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

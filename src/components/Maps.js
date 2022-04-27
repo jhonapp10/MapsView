@@ -17,7 +17,7 @@ import GoogleMapReact from 'google-map-react'
 import credentials from "../credentials";
 //import Search from "./Search";
 import zIndex from "@mui/material/styles/zIndex";
-import Marker from "./Marker";
+import MarkerC from "./MarkerC";
 
 
 
@@ -68,9 +68,7 @@ class Maps extends Component {
     render(){
         console.log(this.props.loadMarket);
 
-        /*<div className="varSearch col-7">
-                        <Search></Search>
-                    </div>*/
+       
         if (this.props.loadMarket===true){
 
 
@@ -90,13 +88,10 @@ class Maps extends Component {
                     defaultZoom={this.props.Zoom}
                     zIndex={0}
                     
-                    yesIWantToUseGoogleMapApiInternals={true}
-                    //onGoogleApiLoaded={({ map, maps }) => this.renderMarkers(map, maps)}
-                    
-                    //onDrag={({ map, maps }) => this.renderMarkers(map, maps)}
+                    yesIWantToUseGoogleMapApiInternals={true}               
 
                     >
-                    <Marker title="hola" //position= { lat: this.props.lat, lng: this.props.lng }
+                    <MarkerC title="hola" key={1} 
                     lat={this.props.lat}
                     lng={this.props.lng}/>
                        
@@ -130,10 +125,7 @@ class Maps extends Component {
                     defaultZoom={this.props.Zoom}
                     zIndex={0}
                     
-                    //style={{height:"100vh", width:"100%"}}
-                    //options={{styles: lightMode ? lightTheme : darkTheme}}
-                    yesIWantToUseGoogleMapApiInternals={true}
-                    onGoogleApiLoaded={({ map, maps }) => this.renderMarkers(map, maps)}
+                    
                     >
                             
                     </GoogleMapReact>
