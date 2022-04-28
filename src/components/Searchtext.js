@@ -1,17 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-/*import { Wrapper, Status } from "@googlemaps/react-wrapper";
-import {
-    withScriptjs,
-    withGoogleMap,
-    GoogleMap,
-    Marker,
-    InfoWindow
-  } from "react-google-maps";
-import credentials from "../credentials";*/
+
 import { LoadMarket,SetLatMarket,SetLngMarket,SetPlace, SetPlaceId} from "../stores/market/actions";
-//import { LoadMarket } from "../stores/market/actions";
-//import { TextField } from "@mui/material";
+
 import Autocomplete from 'react-google-autocomplete';
 import TextField from "@mui/material/TextField";
 
@@ -81,7 +72,6 @@ class Searchtext extends Component {
                 height: '25px',
                 paddingLeft: '16px',
                 marginTop: '2px',
-                //marginBottom: '100px'
                }}
 
               //onChange={this.ChangeAuto}
