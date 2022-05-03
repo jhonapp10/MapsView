@@ -1,12 +1,21 @@
 # Problem 1 Resolution
 **Que problemas detectas en la operación?**
 
-La funcion foreach nos realiza la operacion en el momento pero no se puede guardar en una variable ya que el valor seria undefined.
+La función foreach nos realiza la operación en el momento pero no se puede guardar en una variable ya que el valor seria undefined.
 y parece ademas que algun camino se me podria escapar con los if.
 
+
+The foreach function performs the operation for us at the moment but it cannot be saved in a variable since the value would be undefined.
+and it also seems that some path could escape me with the if.
+
+
 **Solución alternativa propones?**
-La solucion que aportaria es utilizar map ya que con esto podria ejercer una funcion mientras que recorro el array.
-Ademas que esta solucion me permitiria guardar la solucion en una const o variable (de la manera que esta no se guarda en memoria ningun resultado).
+La solución que aportaria es utilizar map ya que con esto podria ejercer una función mientras que recorro el array.
+Además que esta solución me permitiria guardar la solución en una const o variable let (de la manera que esta actual no se guarda en memoria ningún resultado).
+
+The solution I would provide is to use map since with this I could perform a function while I go through the array.
+In addition, this solution would allow me to save the solution in a const or let variable (as it is current, no result is saved in memory).
+
 
 **Resolución pseudocódigo**
 
@@ -44,11 +53,6 @@ getTotal()=>{
     })
 }
 
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
